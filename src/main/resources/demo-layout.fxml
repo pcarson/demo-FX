@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="447.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.Controller">
+  <children>
+      <Pane prefHeight="449.0" prefWidth="680.0">
+         <children>
+            <Button mnemonicParsing="false" text="Button" />
+            <TabPane fx:id="tabPane" prefHeight="403.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Personal Details">
+                     <content>
+                        <AnchorPane fx:id="fileUploadAnchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="632.0">
+                           <children>
+                              <Label fx:id="fileUploadLocationLabel1" layoutX="35.0" layoutY="94.0" prefHeight="16.0" prefWidth="565.0" />
+                              <TextField fx:id="surname" layoutX="142.0" layoutY="35.0" prefHeight="26.0" prefWidth="172.0" />
+                              <TextField fx:id="firstName" layoutX="426.0" layoutY="33.0" prefHeight="26.0" prefWidth="191.0" />
+                              <TextField fx:id="middleNames" layoutX="426.0" layoutY="65.0" prefHeight="24.0" prefWidth="192.0" />
+                              <Label layoutX="49.0" layoutY="31.0" prefHeight="33.0" prefWidth="93.0" text="Family Name" />
+                              <Label layoutX="235.0" layoutY="61.0" prefHeight="33.0" prefWidth="176.0" text="Additional/Middle Name(s)" />
+                              <Label layoutX="323.0" layoutY="32.0" prefHeight="33.0" prefWidth="95.0" text="Given Name" />
+                              <Label layoutX="49.0" layoutY="102.0" prefHeight="26.0" prefWidth="80.0" text="Email" />
+                              <TextField fx:id="personalEmailAddress" layoutX="141.0" layoutY="102.0" prefHeight="26.0" prefWidth="341.0" />
+                              <Label layoutX="49.0" layoutY="135.0" prefHeight="26.0" prefWidth="78.0" text="Phone" />
+                              <TextField fx:id="personalPhoneNumber" layoutX="142.0" layoutY="137.0" prefHeight="26.0" prefWidth="342.0" />
+                              <Label layoutX="47.0" layoutY="166.0" prefHeight="33.0" prefWidth="105.0" text="Address" />
+                              <TextField fx:id="personalStreet" layoutX="176.0" layoutY="199.0" prefHeight="26.0" prefWidth="334.0" />
+                              <Label layoutX="48.0" layoutY="195.0" prefHeight="33.0" prefWidth="120.0" text="Street and House" />
+                              <TextField fx:id="personalCity" layoutX="175.0" layoutY="231.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="227.0" prefHeight="33.0" prefWidth="121.0" text="City / Town" />
+                              <TextField fx:id="personalRegion" layoutX="175.0" layoutY="265.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="261.0" prefHeight="33.0" prefWidth="121.0" text="Region" />
+                              <TextField fx:id="personalPostalCode" layoutX="175.0" layoutY="299.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="295.0" prefHeight="33.0" prefWidth="121.0" text="Postal Code" />
+                              <TextField fx:id="personalCountry" layoutX="175.0" layoutY="332.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="328.0" prefHeight="33.0" prefWidth="121.0" text="Country" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Organisation">
+                     <content>
+                        <AnchorPane fx:id="fileUploadAnchorPane12" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="632.0">
+                           <children>
+                              <Label fx:id="fileUploadLocationLabel12" layoutX="35.0" layoutY="94.0" prefHeight="16.0" prefWidth="565.0" />
+                              <TextField fx:id="orgName" layoutX="47.0" layoutY="39.0" prefHeight="26.0" prefWidth="559.0" />
+                              <Label layoutX="49.0" layoutY="6.0" prefHeight="33.0" prefWidth="140.0" text="Organisation Name" />
+                              <TextField fx:id="orgWebsiteUrl" layoutX="142.0" layoutY="70.0" prefHeight="26.0" prefWidth="341.0" />
+                              <Label layoutX="49.0" layoutY="102.0" prefHeight="26.0" prefWidth="80.0" text="Email" />
+                              <TextField fx:id="orgEmailAddress" layoutX="141.0" layoutY="102.0" prefHeight="26.0" prefWidth="341.0" />
+                              <Label layoutX="49.0" layoutY="135.0" prefHeight="26.0" prefWidth="78.0" text="Phone" />
+                              <TextField fx:id="orgPhoneNumber" layoutX="142.0" layoutY="137.0" prefHeight="26.0" prefWidth="342.0" />
+                              <Label layoutX="47.0" layoutY="166.0" prefHeight="33.0" prefWidth="105.0" text="Address" />
+                              <TextField fx:id="orgStreet" layoutX="176.0" layoutY="199.0" prefHeight="26.0" prefWidth="334.0" />
+                              <Label layoutX="48.0" layoutY="195.0" prefHeight="33.0" prefWidth="120.0" text="Street and House" />
+                              <TextField fx:id="orgCity" layoutX="175.0" layoutY="231.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="227.0" prefHeight="33.0" prefWidth="121.0" text="City / Town" />
+                              <TextField fx:id="orgRegion" layoutX="175.0" layoutY="265.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="261.0" prefHeight="33.0" prefWidth="121.0" text="Region" />
+                              <TextField fx:id="orgPostalCode" layoutX="175.0" layoutY="299.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="295.0" prefHeight="33.0" prefWidth="121.0" text="Postal Code" />
+                              <TextField fx:id="orgCountry" layoutX="175.0" layoutY="332.0" prefHeight="26.0" prefWidth="172.0" />
+                              <Label layoutX="47.0" layoutY="328.0" prefHeight="33.0" prefWidth="121.0" text="Country" />
+                              <Label layoutX="50.0" layoutY="70.0" prefHeight="26.0" prefWidth="80.0" text="Url" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Categories">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="fromDbTableView" prefHeight="369.0" prefWidth="670.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Languages">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="fromXlsxTableView" layoutX="5.0" prefHeight="371.0" prefWidth="670.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="qrTab" text="QR Code">
+                     <content>
+                        <AnchorPane fx:id="fileUploadAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="640.0">
+                           <children>
+                              <Label fx:id="fileUploadLocationLabel" layoutX="35.0" layoutY="128.0" prefHeight="16.0" prefWidth="565.0" />
+                              <TextArea fx:id="qrContent" editable="false" layoutX="400.0" layoutY="36.0" prefHeight="299.0" prefWidth="257.0" />
+                              <ImageView fx:id="qrImage" fitHeight="298.0" fitWidth="352.0" layoutX="35.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="downloadButton" disable="true" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Download QR" />
+                              <TextField fx:id="lastDownloadedLocation" editable="false" layoutX="212.0" layoutY="345.0" prefHeight="26.0" prefWidth="443.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button fx:id="runButton" layoutX="466.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Generate QR" />
+         </children>
+      </Pane>
+  </children>
+</VBox>
