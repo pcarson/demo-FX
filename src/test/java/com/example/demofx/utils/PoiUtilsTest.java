@@ -14,7 +14,7 @@ class PoiUtilsTest {
         ObservableList<LanguageDto> list = FXCollections.observableArrayList();
         assertEquals(0, list.size());
         PoiUtils.populateListFromXlsx(list, "xls/languages.xlsx");
-        assertEquals(267, list.size());
+        assertEquals(268, list.size());
     }
 
     @Test

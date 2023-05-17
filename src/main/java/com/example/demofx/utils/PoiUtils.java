@@ -26,53 +26,35 @@ public class PoiUtils {
             var myWorkBook = new XSSFWorkbook(fis);
 
             // Return first sheet from the XLSX workbook
-            var mySheet = myWorkBook.getSheetAt(0);
+            var sheet = myWorkBook.getSheetAt(0);
 
-            // Get iterator to all the rows in current sheet
-            var rowIterator = mySheet.iterator();
-
-            // Traversing over each row of XLSX file
-            var rowPos = 0;
-            while (rowIterator.hasNext()) {
-                var row = (Row) rowIterator.next();
-
-                var dto = new LanguageDto();
-
-                // For each row, iterate through each columns
-                var cellIterator = row.cellIterator();
-                var cellPos = 0;
-                while (cellIterator.hasNext()) {
-
-                    var cell = (Cell) cellIterator.next();
-
-                    var type = cell.getCellType();
-                    if (rowPos > 0) {
-                        switch (type.name()) {
-                            case "STRING":
-                                if (cellPos == 1) {
-                                    dto.setDescription(cell.getStringCellValue());
-                                }
-                                if (cellPos == 0) {
-                                    dto.setCode(cell.getStringCellValue());
-                                }
-                                break;
-                            case "BOOLEAN":
-                                log.info(cell.getBooleanCellValue() + "");
-                                break;
-                            default:
-                                log.info(cell.getCellType().toString());
-
-                        }
-                        cellPos++;
-                    }
-                }
-                if (rowPos > 0) {
-                    fromXlsxRows.add(dto);
-                }
-                rowPos++;
+            for (Row row : sheet) {
+                fromXlsxRows.add(processRow(row));
             }
         } catch (Exception ex) {
             log.error("Couldn't process Excel file");
         }
     }
+
+    private static LanguageDto processRow(Row row) {
+        final LanguageDto dto = new LanguageDto();
+        var iter = 0;
+        for (Cell cell : row) {
+            switch (cell.getCellType()) {
+                case STRING:
+                    if (iter == 0) {
+                        dto.setCode(cell.getStringCellValue());
+                    }
+                    if (iter == 1) {
+                        dto.setDescription(cell.getStringCellValue());
+                    }
+                    break;
+                default:
+                    // not sure what this is, but we're not interested
+            }
+            iter++;
+        }
+        return dto;
+    }
+
 }

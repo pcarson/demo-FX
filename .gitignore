@@ -11,6 +11,9 @@ target
 *.war
 *.ear
 
+# logs
+*.log
+
 # Serverless directories
 .serverless
 # node modules
