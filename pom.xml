@@ -29,6 +29,18 @@
         <junit-platform.version>5.9.1</junit-platform.version>
         <log4j.version>2.15.0</log4j.version>
         <slf4j.version>1.7.30</slf4j.version>
+
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>199318437e72c10d1471e4ff659c85b7e689d104</sonar.login>
+        <sonar.coverage.exclusions>
+            **/enums/**/*,
+            **/entity/**/*,
+            **/dto/**/*,
+            **/s3/**/*,
+            **/sns/**/*,
+            **/util/*
+        </sonar.coverage.exclusions>
+
     </properties>
 
     <dependencies>
@@ -170,7 +182,8 @@
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
-        </dependency>        <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit-platform.version}</version>
@@ -193,9 +206,9 @@
                 <version>0.0.5</version>
                 <configuration>
                     <release>${maven.compiler.release}</release>
-                    <jlinkImageName>Offersfx</jlinkImageName>
+                    <jlinkImageName>QRfx</jlinkImageName>
                     <launcher>launcher</launcher>
-                    <mainClass>Offersfx/com.example.demofx.Main</mainClass>
+                    <mainClass>QRfx/com.example.demofx.Main</mainClass>
                 </configuration>
             </plugin>
             <plugin>

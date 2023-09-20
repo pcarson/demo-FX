@@ -44,6 +44,15 @@ mvn clean compile package
 $JAVA_HOME/bin/java -jar shade/DemoFX.jar
 ```
 
+### Sonar
+Sonar can be built stand-alone as detailed below if you have access to an instance.
+NB You'll need to update the 'sonar' properties in the pom.xml file to identify the host and login token to be used when sending analysis to sonar.
+
+```$xslt
+mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+mvn sonar:sonar
+```
+
 ### TODO
 
 1) ... write a lot more tests, particularly after finding out how test the GUI elements rather than just the business logic ....
